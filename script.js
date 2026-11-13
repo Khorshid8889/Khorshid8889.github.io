@@ -1,355 +1,399 @@
 /* =========================
-   Product Data
+KHORSHID PRODUCTS
 ========================= */
 
 const products = [
-    {
-        id: 1,
-        name: "گلدان سفالی آفتاب",
-        price: 850000
-    },
-    {
-        id: 2,
-        name: "ظرف دکوری پارسی",
-        price: 650000
-    },
-    {
-        id: 3,
-        name: "اثر هنری خورشید",
-        price: 520000
-    },
-    {
-        id: 4,
-        name: "کاسه سرامیکی ماه",
-        price: 480000
-    }
+
+{
+    id: 1,
+    name: "گلدان سفالی آفتاب",
+    price: 850000
+},
+
+{
+    id: 2,
+    name: "ظرف دکوری پارسی",
+    price: 650000
+},
+
+{
+    id: 3,
+    name: "اثر هنری خورشید",
+    price: 520000
+},
+
+{
+    id: 4,
+    name: "کاسه سرامیکی ماه",
+    price: 480000
+}
+
 ];
 
-
 /* =========================
-   Telegram Information
+TELEGRAM INFORMATION
 ========================= */
 
 const telegramUsername = "zizi1001";
+
 const telegramPhone = "09044188589";
+
 const telegramChannel = "https://t.me/suun1001";
 
-
 /* =========================
-   Elements
+HTML ELEMENTS
 ========================= */
 
 const cartButton = document.getElementById("cartButton");
+
 const closeCart = document.getElementById("closeCart");
 
 const cartSidebar = document.getElementById("cartSidebar");
+
 const cartOverlay = document.getElementById("cartOverlay");
 
 const cartItems = document.getElementById("cartItems");
+
 const cartCount = document.getElementById("cartCount");
+
 const cartTotal = document.getElementById("cartTotal");
 
 const checkoutButton = document.getElementById("checkoutButton");
 
 const menuToggle = document.getElementById("menuToggle");
+
 const navMenu = document.getElementById("navMenu");
 
-
 /* =========================
-   Cart Data
+CART STORAGE
 ========================= */
 
 let cart = [];
 
 try {
 
-    cart = JSON.parse(localStorage.getItem("khorshidCart")) || [];
+const savedCart = JSON.parse(
+    localStorage.getItem("khorshidCart")
+);
 
-    if (!Array.isArray(cart)) {
-        cart = [];
-    }
+if (Array.isArray(savedCart)) {
 
-} catch (error) {
-
-    cart = [];
+    cart = savedCart.filter(item =>
+        products.some(product =>
+            product.id === item.id
+        ) &&
+        Number.isInteger(item.quantity) &&
+        item.quantity > 0
+    );
 
 }
 
+} catch (error) {
+
+cart = [];
+
+}
 
 /* =========================
-   Number Formatter
+PRICE FORMAT
 ========================= */
 
 function formatPrice(price) {
 
-    return new Intl.NumberFormat("fa-IR").format(price);
+return new Intl.NumberFormat("fa-IR").format(price);
 
 }
 
-
 /* =========================
-   Save Cart
+SAVE CART
 ========================= */
 
 function saveCart() {
 
-    localStorage.setItem("khorshidCart", JSON.stringify(cart));
+localStorage.setItem(
+    "khorshidCart",
+    JSON.stringify(cart)
+);
 
 }
 
-
 /* =========================
-   Add To Cart
+ADD TO CART
 ========================= */
 
 document.querySelectorAll(".add-to-cart").forEach(button => {
 
-    button.addEventListener("click", () => {
+button.addEventListener("click", () => {
 
-        const productId = Number(button.dataset.id);
+    const productId = Number(button.dataset.id);
 
-        const product = products.find(item => item.id === productId);
+    const product = products.find(item =>
+        item.id === productId
+    );
 
-        if (!product) return;
+    if (!product) return;
 
-        const existingItem = cart.find(item => item.id === productId);
+    const existingItem = cart.find(item =>
+        item.id === productId
+    );
 
-        if (existingItem) {
+    if (existingItem) {
 
-            existingItem.quantity++;
+        existingItem.quantity++;
 
-        } else {
+    } else {
 
-            cart.push({
-                id: product.id,
-                name: product.name,
-                price: product.price,
-                quantity: 1
-            });
+        cart.push({
 
-        }
+            id: product.id,
 
-        saveCart();
-        renderCart();
+            name: product.name,
 
-        button.textContent = "اضافه شد ✓";
+            price: product.price,
 
-        setTimeout(() => {
+            quantity: 1
 
-            button.textContent = "افزودن +";
+        });
 
-        }, 1000);
+    }
 
-    });
+    saveCart();
+
+    renderCart();
+
+    button.textContent = "اضافه شد ✓";
+
+    setTimeout(() => {
+
+        button.textContent = "افزودن به سبد +";
+
+    }, 1200);
 
 });
 
+});
 
 /* =========================
-   Render Cart
+RENDER CART
 ========================= */
 
 function renderCart() {
 
-    cartItems.innerHTML = "";
+cartItems.innerHTML = "";
 
-    let total = 0;
-    let count = 0;
+let total = 0;
 
-    if (cart.length === 0) {
-
-        cartItems.innerHTML =
-            '<p class="empty-cart">سبد خرید شما خالی است.</p>';
-
-    }
-
-    cart.forEach(item => {
-
-        total += item.price * item.quantity;
-
-        count += item.quantity;
-
-        const cartItem = document.createElement("div");
-
-        cartItem.className = "cart-item";
-
-        const info = document.createElement("div");
-
-        const title = document.createElement("h4");
-
-        title.textContent = item.name;
-
-        const price = document.createElement("p");
-
-        price.textContent =
-            formatPrice(item.price) + " تومان";
-
-        info.appendChild(title);
-
-        info.appendChild(price);
+let count = 0;
 
 
-        const actions = document.createElement("div");
+if (cart.length === 0) {
 
-        actions.className = "cart-item-actions";
+    cartItems.innerHTML =
+        '<p class="empty-cart">هنوز محصولی انتخاب نکرده‌اید.</p>';
 
-
-        const decreaseButton = document.createElement("button");
-
-        decreaseButton.textContent = "−";
-
-        decreaseButton.setAttribute(
-            "aria-label",
-            "کم کردن تعداد"
-        );
-
-        decreaseButton.addEventListener("click", () => {
-
-            changeQuantity(item.id, -1);
-
-        });
+}
 
 
-        const quantity = document.createElement("span");
+cart.forEach(item => {
 
-        quantity.textContent = formatPrice(item.quantity);
+    total += item.price * item.quantity;
 
-
-        const increaseButton = document.createElement("button");
-
-        increaseButton.textContent = "+";
-
-        increaseButton.setAttribute(
-            "aria-label",
-            "زیاد کردن تعداد"
-        );
-
-        increaseButton.addEventListener("click", () => {
-
-            changeQuantity(item.id, 1);
-
-        });
+    count += item.quantity;
 
 
-        const removeButton = document.createElement("button");
+    const cartItem = document.createElement("div");
 
-        removeButton.textContent = "×";
-
-        removeButton.className = "remove-item";
-
-        removeButton.setAttribute(
-            "aria-label",
-            "حذف محصول"
-        );
-
-        removeButton.addEventListener("click", () => {
-
-            removeItem(item.id);
-
-        });
+    cartItem.className = "cart-item";
 
 
-        actions.appendChild(decreaseButton);
+    const info = document.createElement("div");
 
-        actions.appendChild(quantity);
+    const title = document.createElement("h4");
 
-        actions.appendChild(increaseButton);
+    title.textContent = item.name;
 
-        actions.appendChild(removeButton);
+    const price = document.createElement("p");
+
+    price.textContent =
+        formatPrice(item.price) + " تومان";
 
 
-        cartItem.appendChild(info);
+    info.appendChild(title);
 
-        cartItem.appendChild(actions);
+    info.appendChild(price);
 
-        cartItems.appendChild(cartItem);
+
+    const actions = document.createElement("div");
+
+    actions.className = "cart-item-actions";
+
+
+    const decreaseButton = document.createElement("button");
+
+    decreaseButton.textContent = "−";
+
+    decreaseButton.setAttribute(
+        "aria-label",
+        "کم کردن تعداد"
+    );
+
+    decreaseButton.addEventListener("click", () => {
+
+        changeQuantity(item.id, -1);
 
     });
 
 
-    cartCount.textContent = formatPrice(count);
+    const quantity = document.createElement("span");
 
-    cartTotal.textContent =
-        formatPrice(total) + " تومان";
+    quantity.textContent =
+        formatPrice(item.quantity);
+
+
+    const increaseButton = document.createElement("button");
+
+    increaseButton.textContent = "+";
+
+    increaseButton.setAttribute(
+        "aria-label",
+        "زیاد کردن تعداد"
+    );
+
+    increaseButton.addEventListener("click", () => {
+
+        changeQuantity(item.id, 1);
+
+    });
+
+
+    const removeButton = document.createElement("button");
+
+    removeButton.textContent = "×";
+
+    removeButton.className = "remove-item";
+
+    removeButton.setAttribute(
+        "aria-label",
+        "حذف محصول"
+    );
+
+    removeButton.addEventListener("click", () => {
+
+        removeItem(item.id);
+
+    });
+
+
+    actions.appendChild(decreaseButton);
+
+    actions.appendChild(quantity);
+
+    actions.appendChild(increaseButton);
+
+    actions.appendChild(removeButton);
+
+
+    cartItem.appendChild(info);
+
+    cartItem.appendChild(actions);
+
+    cartItems.appendChild(cartItem);
+
+});
+
+
+cartCount.textContent = formatPrice(count);
+
+cartTotal.textContent =
+    formatPrice(total) + " تومان";
 
 }
 
-
 /* =========================
-   Change Quantity
+CHANGE QUANTITY
 ========================= */
 
 function changeQuantity(id, amount) {
 
-    const item = cart.find(product => product.id === id);
+const item = cart.find(product =>
+    product.id === id
+);
 
-    if (!item) return;
+if (!item) return;
 
-    item.quantity += amount;
+item.quantity += amount;
 
-    if (item.quantity <= 0) {
+if (item.quantity <= 0) {
 
-        cart = cart.filter(product => product.id !== id);
-
-    }
-
-    saveCart();
-
-    renderCart();
+    cart = cart.filter(product =>
+        product.id !== id
+    );
 
 }
 
+saveCart();
+
+renderCart();
+
+}
 
 /* =========================
-   Remove Item
+REMOVE PRODUCT
 ========================= */
 
 function removeItem(id) {
 
-    cart = cart.filter(item => item.id !== id);
+cart = cart.filter(item =>
+    item.id !== id
+);
 
-    saveCart();
+saveCart();
 
-    renderCart();
+renderCart();
 
 }
 
-
 /* =========================
-   Open Cart
+OPEN CART
 ========================= */
 
 function openCart() {
 
-    cartSidebar.classList.add("open");
+cartSidebar.classList.add("open");
 
-    cartOverlay.classList.add("show");
+cartOverlay.classList.add("show");
 
 }
 
-
 /* =========================
-   Close Cart
+CLOSE CART
 ========================= */
 
 function closeCartSidebar() {
 
-    cartSidebar.classList.remove("open");
+cartSidebar.classList.remove("open");
 
-    cartOverlay.classList.remove("show");
+cartOverlay.classList.remove("show");
 
 }
 
+cartButton.addEventListener(
+"click",
+openCart
+);
 
-cartButton.addEventListener("click", openCart);
+closeCart.addEventListener(
+"click",
+closeCartSidebar
+);
 
-closeCart.addEventListener("click", closeCartSidebar);
-
-cartOverlay.addEventListener("click", closeCartSidebar);
-
+cartOverlay.addEventListener(
+"click",
+closeCartSidebar
+);
 
 /* =========================
-   Product Filters
+PRODUCT FILTERS
 ========================= */
 
 const filterButtons = document.querySelectorAll(".filter-btn");
@@ -358,57 +402,31 @@ const productCards = document.querySelectorAll(".product-card");
 
 filterButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+button.addEventListener("click", () => {
 
-        filterButtons.forEach(btn => {
+    filterButtons.forEach(btn => {
 
-            btn.classList.remove("active");
-
-        });
-
-        button.classList.add("active");
-
-        const filter = button.dataset.filter;
-
-        productCards.forEach(card => {
-
-            if (
-                filter === "all" ||
-                card.dataset.category === filter
-            ) {
-
-                card.classList.remove("hidden");
-
-            } else {
-
-                card.classList.add("hidden");
-
-            }
-
-        });
+        btn.classList.remove("active");
 
     });
 
-});
+    button.classList.add("active");
+
+    const filter = button.dataset.filter;
 
 
-/* =========================
-   Category Navigation
-========================= */
+    productCards.forEach(card => {
 
-document.querySelectorAll(".category-card").forEach(card => {
+        if (
+            filter === "all" ||
+            card.dataset.category === filter
+        ) {
 
-    card.addEventListener("click", () => {
+            card.classList.remove("hidden");
 
-        const category = card.dataset.category;
+        } else {
 
-        const filterButton = document.querySelector(
-            `.filter-btn[data-filter="${category}"]`
-        );
-
-        if (filterButton) {
-
-            filterButton.click();
+            card.classList.add("hidden");
 
         }
 
@@ -416,100 +434,136 @@ document.querySelectorAll(".category-card").forEach(card => {
 
 });
 
+});
 
 /* =========================
-   Mobile Menu
+COLLECTION FILTERS
+========================= */
+
+document.querySelectorAll(".collection-card").forEach(card => {
+
+card.addEventListener("click", () => {
+
+    const category = card.dataset.category;
+
+    const filterButton = document.querySelector(
+        `.filter-btn[data-filter="${category}"]`
+    );
+
+    if (filterButton) {
+
+        filterButton.click();
+
+    }
+
+});
+
+});
+
+/* =========================
+MOBILE MENU
 ========================= */
 
 menuToggle.addEventListener("click", () => {
 
-    navMenu.classList.toggle("show");
+navMenu.classList.toggle("show");
 
 });
-
 
 document.querySelectorAll(".nav-menu a").forEach(link => {
 
-    link.addEventListener("click", () => {
+link.addEventListener("click", () => {
 
-        navMenu.classList.remove("show");
-
-    });
+    navMenu.classList.remove("show");
 
 });
 
+});
 
 /* =========================
-   Telegram Checkout
+TELEGRAM CHECKOUT
 ========================= */
 
 checkoutButton.addEventListener("click", async () => {
 
-    if (cart.length === 0) {
+if (cart.length === 0) {
 
-        alert("سبد خرید شما خالی است!");
+    alert("سبد خرید شما خالی است!");
 
-        return;
+    return;
 
-    }
-
-
-    let message =
-        "سلام، برای ثبت سفارش از فروشگاه خورشید پیام می‌دهم.\n\n";
-
-    let total = 0;
+}
 
 
-    cart.forEach(item => {
+let message =
+    "سلام، برای ثبت سفارش از فروشگاه خورشید پیام می‌دهم.\n\n";
 
-        const itemTotal = item.price * item.quantity;
+let total = 0;
 
-        total += itemTotal;
 
-        message +=
-            `محصول: ${item.name}\n` +
-            `تعداد: ${formatPrice(item.quantity)}\n` +
-            `قیمت: ${formatPrice(itemTotal)} تومان\n\n`;
+cart.forEach(item => {
 
-    });
+    const itemTotal =
+        item.price * item.quantity;
+
+    total += itemTotal;
 
 
     message +=
-        "--------------------\n" +
-        `مجموع سفارش: ${formatPrice(total)} تومان\n\n` +
-        "لطفاً برای تکمیل سفارش راهنمایی‌ام کنید.";
-
-
-    const telegramURL = `https://t.me/${telegramUsername}`;
-
-
-    try {
-
-        await navigator.clipboard.writeText(message);
-
-        alert(
-            "متن سفارش کپی شد!\n\n" +
-            "حالا وارد گفت‌وگوی تلگرام خورشید شوید " +
-            "و متن را در گفت‌وگو ارسال کنید."
-        );
-
-    } catch (error) {
-
-        alert(
-            "برای ثبت سفارش وارد تلگرام شوید و " +
-            "جزئیات محصولات سبد خرید را ارسال کنید."
-        );
-
-    }
-
-
-    window.open(telegramURL, "_blank");
+        `محصول: ${item.name}\n` +
+        `تعداد: ${formatPrice(item.quantity)}\n` +
+        `قیمت: ${formatPrice(itemTotal)} تومان\n\n`;
 
 });
 
 
+message +=
+    "----------------------\n" +
+    `مجموع سفارش: ${formatPrice(total)} تومان\n\n` +
+    "لطفاً برای تکمیل سفارش راهنمایی‌ام کنید.";
+
+
+const telegramURL =
+    `https://t.me/${telegramUsername}`;
+
+
+try {
+
+    if (!navigator.clipboard) {
+
+        throw new Error("Clipboard is unavailable");
+
+    }
+
+    await navigator.clipboard.writeText(message);
+
+    alert(
+        "متن سفارش کپی شد!\n\n" +
+        "حالا وارد گفت‌وگوی تلگرام خورشید شوید " +
+        "و متن سفارش را ارسال کنید."
+    );
+
+} catch (error) {
+
+    alert(
+        "گفت‌وگوی تلگرام باز می‌شود.\n\n" +
+        "لطفاً محصولات انتخاب‌شده و تعداد آن‌ها را " +
+        "برای ما ارسال کنید."
+    );
+
+}
+
+
+window.open(
+    telegramURL,
+    "_blank",
+    "noopener,noreferrer"
+);
+
+});
+
 /* =========================
-   Initial Cart Render
+INITIALIZE
 ========================= */
 
 renderCart();
