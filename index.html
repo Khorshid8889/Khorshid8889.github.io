@@ -1,1 +1,581 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>خورشید | هنر پارسی، ساخته دستان ما</title>
+
+    <meta name="description" content="فروشگاه خورشید؛ مجموعه‌ای از محصولات دست‌ساز با الهام از هنر و فرهنگ ایران زمین.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <a href="#" class="logo">
+                <span class="logo-symbol">☼</span>
+                <span>خورشید</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home">خانه</a>
+                <a href="#products">محصولات</a>
+                <a href="#about">داستان ما</a>
+                <a href="#contact">ارتباط با ما</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="cart-button" id="cartButton">
+                    سبد خرید
+                    <span id="cartCount">۰</span>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero" id="home">
+
+            <div class="hero-content container">
+
+                <div class="hero-text">
+
+                    <span class="eyebrow">هنر پارسی، اصالت ایرانی</span>
+
+                    <h1>
+                        خورشید
+                        <span>روایتی از هنر دستان ما</span>
+                    </h1>
+
+                    <p>
+                        از دل خاک، با الهام از شکوه هنر ایران زمین؛
+                        آثاری دست‌ساز برای زیباتر کردن لحظه‌های زندگی.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#products" class="btn btn-primary">
+                            دیدن محصولات
+                        </a>
+
+                        <a href="#about" class="btn btn-outline">
+                            داستان خورشید
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-decoration">
+                    ✺
+                </div>
+
+            </div>
+
+            <div class="hero-bottom-text">
+                میراث خاک، هنر دستان ما
+            </div>
+
+        </section>
+
+
+        <!-- Ornament -->
+        <div class="ornament-divider">
+            ✺
+        </div>
+
+
+        <!-- Introduction -->
+        <section class="intro section-padding">
+
+            <div class="container intro-content">
+
+                <span class="section-label">درباره خورشید</span>
+
+                <h2>
+                    زیبایی در سادگی است،
+                    <br>
+                    اصالت در هنر
+                </h2>
+
+                <p>
+                    خورشید جایی برای گردهم‌آمدن هنر دست، طبیعت و فرهنگ ایرانی است.
+                    هر محصول داستانی دارد؛ داستانی از خاک، عشق، صبر و خلاقیت.
+                    ما تلاش می‌کنیم زیبایی هنر دست را به خانه‌های شما بیاوریم.
+                </p>
+
+                <div class="intro-symbol">❋</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Categories -->
+        <section class="categories section-padding">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">دنیای خورشید</span>
+
+                    <h2>دسته‌بندی محصولات</h2>
+
+                    <p>با مجموعه‌ای از هنرهای دست‌ساز آشنا شوید.</p>
+
+                </div>
+
+                <div class="category-grid">
+
+                    <a href="#products" class="category-card" data-category="pottery">
+
+                        <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=700&q=85" alt="ظروف سفالی">
+
+                        <div class="category-info">
+                            <h3>سفال و سرامیک</h3>
+                            <span>مشاهده محصولات ←</span>
+                        </div>
+
+                    </a>
+
+
+                    <a href="#products" class="category-card" data-category="decor">
+
+                        <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=700&q=85" alt="وسایل دکوری">
+
+                        <div class="category-info">
+                            <h3>وسایل دکوری</h3>
+                            <span>مشاهده محصولات ←</span>
+                        </div>
+
+                    </a>
+
+
+                    <a href="#products" class="category-card" data-category="handmade">
+
+                        <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=700&q=85" alt="محصولات دست‌ساز">
+
+                        <div class="category-info">
+                            <h3>هنرهای دست‌ساز</h3>
+                            <span>مشاهده محصولات ←</span>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Products -->
+        <section class="products section-padding" id="products">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">انتخابی از هنر ما</span>
+
+                    <h2>محصولات خورشید</h2>
+
+                    <p>هر اثر، تکه‌ای از هنر و اصالت.</p>
+
+                </div>
+
+
+                <div class="filter-buttons">
+
+                    <button class="filter-btn active" data-filter="all">
+                        همه محصولات
+                    </button>
+
+                    <button class="filter-btn" data-filter="pottery">
+                        سفال و سرامیک
+                    </button>
+
+                    <button class="filter-btn" data-filter="decor">
+                        دکوری
+                    </button>
+
+                    <button class="filter-btn" data-filter="handmade">
+                        دست‌ساز
+                    </button>
+
+                </div>
+
+
+                <div class="product-grid" id="productGrid">
+
+                    <!-- Product 1 -->
+                    <article class="product-card" data-category="pottery">
+
+                        <div class="product-image">
+
+                            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=700&q=85" alt="گلدان سفالی">
+
+                            <span class="product-tag">دست‌ساز</span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h3>گلدان سفالی آفتاب</h3>
+
+                            <p>ساخته‌شده با الهام از طبیعت</p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">۸۵۰٬۰۰۰ تومان</span>
+
+                                <button class="add-to-cart" data-id="1">
+                                    افزودن +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Product 2 -->
+                    <article class="product-card" data-category="decor">
+
+                        <div class="product-image">
+
+                            <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=700&q=85" alt="ظرف دکوری">
+
+                            <span class="product-tag">ویژه</span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h3>ظرف دکوری پارسی</h3>
+
+                            <p>ترکیبی از هنر و اصالت</p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">۶۵۰٬۰۰۰ تومان</span>
+
+                                <button class="add-to-cart" data-id="2">
+                                    افزودن +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Product 3 -->
+                    <article class="product-card" data-category="handmade">
+
+                        <div class="product-image">
+
+                            <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=700&q=85" alt="اثر دست‌ساز">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h3>اثر هنری خورشید</h3>
+
+                            <p>هنری برای لحظه‌های خاص</p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">۵۲۰٬۰۰۰ تومان</span>
+
+                                <button class="add-to-cart" data-id="3">
+                                    افزودن +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Product 4 -->
+                    <article class="product-card" data-category="pottery">
+
+                        <div class="product-image">
+
+                            <img src="https://images.unsplash.com/photo-1576021182211-9ea8dced3690?auto=format&fit=crop&w=700&q=85" alt="ظرف سرامیکی">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h3>کاسه سرامیکی ماه</h3>
+
+                            <p>سادگی در کنار زیبایی</p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">۴۸۰٬۰۰۰ تومان</span>
+
+                                <button class="add-to-cart" data-id="4">
+                                    افزودن +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Persian Heritage -->
+        <section class="heritage section-padding">
+
+            <div class="container heritage-content">
+
+                <div class="heritage-symbol">
+                    ✺
+                </div>
+
+                <div class="heritage-text">
+
+                    <span class="section-label">الهام از شکوه ایران</span>
+
+                    <h2>ریشه در خاک، نگاه به آفتاب</h2>
+
+                    <p>
+                        نقش‌مایه‌های هنر ایران باستان، از گل‌های نیلوفر تا
+                        طرح‌های هندسی تخت جمشید، یادآور فرهنگی سرشار از زیبایی‌اند.
+                        ما در خورشید از این میراث الهام می‌گیریم تا هنر امروز را با
+                        اصالت دیروز پیوند بزنیم.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <section class="about section-padding" id="about">
+
+            <div class="container about-grid">
+
+                <div class="about-image">
+
+                    <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=900&q=85" alt="ساخت محصولات دست‌ساز">
+
+                </div>
+
+                <div class="about-text">
+
+                    <span class="section-label">داستان ما</span>
+
+                    <h2>خورشید از کجا آغاز شد؟</h2>
+
+                    <p>
+                        خورشید با یک علاقه ساده آغاز شد؛ علاقه به چیزهایی که
+                        با دست ساخته می‌شوند و روح هنرمند را در خود دارند.
+                    </p>
+
+                    <p>
+                        باور داریم هر اثر دست‌ساز، فراتر از یک وسیله است.
+                        هر اثر می‌تواند بخشی از یک خاطره، یک حس زیبا و یک
+                        داستان ماندگار باشد.
+                    </p>
+
+                    <a href="#contact" class="text-link">
+                        با ما در ارتباط باشید ←
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact -->
+        <section class="contact section-padding" id="contact">
+
+            <div class="container contact-content">
+
+                <span class="section-label">در کنار شما هستیم</span>
+
+                <h2>با خورشید در ارتباط باشید</h2>
+
+                <p>
+                    برای پرسیدن سوال، ثبت سفارش یا آشنایی بیشتر با محصولات
+                    می‌توانید از طریق تلگرام با ما در ارتباط باشید.
+                </p>
+
+                <div class="contact-buttons">
+
+                    <a href="https://t.me/zizi1001"
+                       class="btn btn-primary"
+                       target="_blank"
+                       rel="noopener">
+
+                        پیام به ما در تلگرام
+
+                    </a>
+
+                    <a href="https://t.me/suun1001"
+                       class="btn telegram-channel-btn"
+                       target="_blank"
+                       rel="noopener">
+
+                        عضویت در چنل خورشید
+
+                    </a>
+
+                </div>
+
+
+                <div class="telegram-info">
+
+                    <p>
+                        آیدی تلگرام:
+                        <strong>@zizi1001</strong>
+                    </p>
+
+                    <p>
+                        شماره تلگرام:
+                        <strong>09044188589</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="channel-support">
+
+                    <span>☼</span>
+
+                    <p>
+                        خوشحال می‌شیم عضو چنل تلگرام خورشید باشید.
+                        با عضویت و حمایت شما، به رشد و ادامه مسیر این مجموعه
+                        هنری کمک بزرگی می‌شه.
+                    </p>
+
+                    <a href="https://t.me/suun1001"
+                       target="_blank"
+                       rel="noopener">
+
+                        همین حالا به چنل ما بپیوندید ←
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-logo">
+                <span>☼</span>
+                خورشید
+            </div>
+
+            <p>میراث خاک، هنر دستان ما</p>
+
+            <a href="https://t.me/suun1001" target="_blank" rel="noopener" class="footer-channel">
+                همراه ما در تلگرام باشید
+            </a>
+
+            <span class="copyright">
+                © تمامی حقوق برای فروشگاه خورشید محفوظ است.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cartSidebar">
+
+        <div class="cart-header">
+
+            <h2>سبد خرید</h2>
+
+            <button id="closeCart" class="close-cart" aria-label="بستن سبد خرید">
+                ×
+            </button>
+
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">سبد خرید شما خالی است.</p>
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>مجموع:</span>
+
+                <strong id="cartTotal">۰ تومان</strong>
+
+            </div>
+
+            <button class="checkout-button" id="checkoutButton">
+                ثبت سفارش در تلگرام
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
