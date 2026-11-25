@@ -1,114 +1,115 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-
-<head>
+<!DOCTYPE html><html lang="fa" dir="rtl"><head>
     <meta charset="UTF-8">
-    <title>صفحه پروفایل من</title>
+    <title>کافه آرامش</title>
     <link rel="stylesheet" href="style.css">
-</head>
+</head><body><!-- هدر سایت -->
+<header>
 
-<body>
+    <h1>کافه آرامش</h1>
 
-    <header>
-        <h1>پروفایل شخصی من</h1>
-        <p>به صفحه شخصی من خوش آمدید</p>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">خانه</a></li>
+            <li><a href="#menu">منو</a></li>
+            <li><a href="#about">درباره ما</a></li>
+            <li><a href="#contact">تماس با ما</a></li>
+        </ul>
+    </nav>
 
-    <main>
+</header>
 
-        <section class="profile-card" id="about">
-            <h2>درباره من</h2>
 
-            <img src="images/profile.jpg" alt="عکس پروفایل من">
+<!-- بخش خوش آمدگویی -->
+<section id="home" class="hero">
 
-            <p>
-                سلام! من یک هنرجوی علاقه‌مند به کامپیوتر هستم.
-                دوست دارم برنامه نویسی و طراحی سایت را یاد بگیرم.
-                هدف من این است که در آینده یک طراح سایت خوب شوم.
-            </p>
-        </section>
+    <h2>به کافه آرامش خوش آمدید</h2>
 
-        <section class="skills">
-            <h2>مهارت های من</h2>
+    <p>
+        در کافه آرامش می توانید لحظات خوبی را سپری کنید.
+        ما با قهوه های تازه و نوشیدنی های خوشمزه
+        منتظر حضور گرم شما هستیم.
+    </p>
 
-            <ul class="skills-list">
-                <li>آشنایی با کامپیوتر</li>
-                <li>کار با نرم افزارهای مختلف</li>
-                <li>آشنایی مقدماتی با HTML</li>
-                <li>آشنایی مقدماتی با CSS</li>
-            </ul>
-        </section>
+    <img src="https://placehold.co/800x350?text=Coffee+Shop" alt="تصویر کافه">
 
-        <section>
-            <h2>برنامه یادگیری من</h2>
+</section>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>موضوع</th>
-                        <th>وضعیت</th>
-                    </tr>
-                </thead>
 
-                <tbody>
-                    <tr>
-                        <td>HTML</td>
-                        <td>در حال یادگیری</td>
-                    </tr>
+<!-- منوی کافه -->
+<section id="menu">
 
-                    <tr>
-                        <td>CSS</td>
-                        <td>در حال یادگیری</td>
-                    </tr>
+    <h2>منوی کافه</h2>
 
-                    <tr>
-                        <td>JavaScript</td>
-                        <td>در آینده</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <ul class="menu-list">
 
-        <section>
-            <h2>لینک های مورد علاقه</h2>
+        <li>اسپرسو <span>۸۰ هزار تومان</span></li>
 
-            <a href="#about">رفتن به قسمت درباره من</a>
+        <li>لاته <span>۱۱۰ هزار تومان</span></li>
 
-            <br><br>
+        <li>کاپوچینو <span>۱۰۰ هزار تومان</span></li>
 
-            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-                ورود به سایت گوگل
-            </a>
-        </section>
+        <li>چای <span>۵۰ هزار تومان</span></li>
 
-        <section class="contact-form">
-            <h2>فرم تماس با من</h2>
+        <li>کیک شکلاتی <span>۹۰ هزار تومان</span></li>
 
-            <form>
-                <label for="name">نام شما:</label>
-                <input type="text" id="name" placeholder="نام خود را وارد کنید">
+    </ul>
 
-                <br><br>
+</section>
 
-                <label for="email">ایمیل شما:</label>
-                <input type="email" id="email" placeholder="ایمیل خود را وارد کنید">
 
-                <br><br>
+<!-- درباره ما -->
+<section id="about" class="about">
 
-                <label for="message">پیام شما:</label>
-                <textarea id="message" placeholder="پیام خود را بنویسید"></textarea>
+    <h2>درباره کافه ما</h2>
 
-                <br><br>
+    <p>
+        کافه آرامش محیطی دنج و دوستانه برای استراحت،
+        نوشیدن قهوه و گذراندن وقت با دوستان است.
+        هدف ما ارائه بهترین خدمات به مشتریان است.
+    </p>
 
-                <button type="submit">ارسال پیام</button>
-            </form>
-        </section>
+    <h3>ویژگی های کافه ما</h3>
 
-    </main>
+    <ol>
+        <li>استفاده از قهوه تازه</li>
+        <li>فضای دنج و آرام</li>
+        <li>اینترنت رایگان</li>
+    </ol>
 
-    <footer>
-        <p>ساخته شده توسط من - سال ۱۴۰۵</p>
-    </footer>
+</section>
+
+
+<!-- فرم تماس -->
+<section id="contact">
+
+    <h2>تماس با ما</h2>
+
+    <form>
+
+        <label for="name">نام:</label>
+        <input type="text" id="name" placeholder="نام خود را وارد کنید">
+
+        <br><br>
+
+        <label for="email">ایمیل:</label>
+        <input type="email" id="email" placeholder="ایمیل خود را وارد کنید">
+
+        <br><br>
+
+        <button type="submit">ارسال</button>
+
+    </form>
+
+</section>
+
+
+<!-- پایین سایت -->
+<footer>
+
+    <p>تمام حقوق برای کافه آرامش محفوظ است.</p>
+    <p>طراح سایت: نام خودت</p>
+
+</footer>
 
 </body>
 </html>
