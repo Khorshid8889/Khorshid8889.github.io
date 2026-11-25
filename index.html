@@ -1,641 +1,114 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#171b18">
-  <meta name="description" content="خورشید؛ جایی که خاک، خیال و هنر در دستان هنرمند جان می‌گیرند.">
-  <title>خورشید | قصه‌ای از خاک و خیال</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>صفحه پروفایل من</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="loader" id="loader">
-    <div class="loader-sun">✳</div>
-    <p>کمی صبر کن، جادو در حال شکل گرفتن است...</p>
-  </div>
+    <header>
+        <h1>پروفایل شخصی من</h1>
+        <p>به صفحه شخصی من خوش آمدید</p>
+    </header>
 
-  <div class="cursor-glow"></div>
+    <main>
 
-  <div class="announcement">
-    <span>✦</span>
-    هر تکه، یک داستان؛ هر داستان، یک جهان کوچک
-    <span>✦</span>
-  </div>
+        <section class="profile-card" id="about">
+            <h2>درباره من</h2>
 
-  <header class="header" id="top">
-    <a href="#top" class="logo">
-      <span class="logo-symbol">☼</span>
-      <span class="logo-text">
-        <strong>خورشید</strong>
-        <small>قصه‌ای از خاک و خیال</small>
-      </span>
-    </a>
+            <img src="images/profile.jpg" alt="عکس پروفایل من">
 
-    <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو">
-      <span></span><span></span>
-    </button>
+            <p>
+                سلام! من یک هنرجوی علاقه‌مند به کامپیوتر هستم.
+                دوست دارم برنامه نویسی و طراحی سایت را یاد بگیرم.
+                هدف من این است که در آینده یک طراح سایت خوب شوم.
+            </p>
+        </section>
 
-    <nav class="nav" id="nav">
-      <a href="#home">خانه</a>
-      <a href="#collections">مجموعه‌ها</a>
-      <a href="#featured">انتخاب هنرمند</a>
-      <a href="#story">داستان ما</a>
-      <a href="#process">از خاک تا هنر</a>
-      <a href="#journal">دفتر خیال</a>
-    </nav>
+        <section class="skills">
+            <h2>مهارت های من</h2>
 
-    <a href="#contact" class="header-action">تماس با ما <span>↗</span></a>
-  </header>
+            <ul class="skills-list">
+                <li>آشنایی با کامپیوتر</li>
+                <li>کار با نرم افزارهای مختلف</li>
+                <li>آشنایی مقدماتی با HTML</li>
+                <li>آشنایی مقدماتی با CSS</li>
+            </ul>
+        </section>
 
-  <main>
+        <section>
+            <h2>برنامه یادگیری من</h2>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="hero-grain"></div>
-      <div class="hero-orbit orbit-one"></div>
-      <div class="hero-orbit orbit-two"></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>موضوع</th>
+                        <th>وضعیت</th>
+                    </tr>
+                </thead>
 
-      <div class="hero-content">
-        <div class="eyebrow"><span></span> هنر دست، روح طبیعت</div>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>در حال یادگیری</td>
+                    </tr>
 
-        <h1>
-          زیبایی را
-          <span class="title-art">از دل خاک</span>
-          <span class="title-last">به خانه بیاور.</span>
-        </h1>
+                    <tr>
+                        <td>CSS</td>
+                        <td>در حال یادگیری</td>
+                    </tr>
 
-        <p class="hero-description">
-          اینجا خاک فقط خاک نیست؛
-          جایی‌ست برای جان گرفتن خیال،
-          برای لمس آرامش و تماشای زیبایی‌هایی
-          که هیچ‌کدام شبیه دیگری نیستند.
-        </p>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>در آینده</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-        <div class="hero-buttons">
-          <a href="#collections" class="button button-primary">کشف دنیای خورشید <span>↗</span></a>
-          <a href="#story" class="button button-ghost">داستان ما را بخوان</a>
-        </div>
+        <section>
+            <h2>لینک های مورد علاقه</h2>
 
-        <div class="hero-note">
-          <span class="note-line"></span>
-          <span>ساخته‌شده با دست، آغشته به عشق</span>
-        </div>
-      </div>
+            <a href="#about">رفتن به قسمت درباره من</a>
 
-      <div class="hero-visual">
-        <div class="hero-image-frame">
-          <img
-            src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1100&q=85"
-            alt="ظروف سفالی دست‌ساز"
-          >
-          <div class="image-stamp">HAND<br>MADE<br><span>✳</span></div>
-        </div>
+            <br><br>
 
-        <div class="floating-card floating-card-top">
-          <span>✳</span>
-          <div>
-            <strong>هنر بی‌تکرار</strong>
-            <small>هر اثر، منحصر به فرد</small>
-          </div>
-        </div>
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                ورود به سایت گوگل
+            </a>
+        </section>
 
-        <div class="floating-card floating-card-bottom">
-          <span class="floating-number">۰۱</span>
-          <div>
-            <strong>از دل طبیعت</strong>
-            <small>برای زندگی روزمره</small>
-          </div>
-        </div>
+        <section class="contact-form">
+            <h2>فرم تماس با من</h2>
 
-        <span class="hero-decoration">✺</span>
-      </div>
+            <form>
+                <label for="name">نام شما:</label>
+                <input type="text" id="name" placeholder="نام خود را وارد کنید">
 
-      <div class="hero-bottom">
-        <span>SCROLL TO EXPLORE</span>
-        <span class="scroll-arrow">↓</span>
-        <span>دنیایی از رنگ، خاک و خیال</span>
-      </div>
-    </section>
+                <br><br>
 
-    <!-- MARQUEE -->
-    <div class="marquee">
-      <div class="marquee-track">
-        <span>هنر دست</span><i>✳</i>
-        <span>روح طبیعت</span><i>✳</i>
-        <span>زیبایی بی‌تکرار</span><i>✳</i>
-        <span>قصه‌های سفالی</span><i>✳</i>
-        <span>هنر دست</span><i>✳</i>
-        <span>روح طبیعت</span><i>✳</i>
-        <span>زیبایی بی‌تکرار</span><i>✳</i>
-        <span>قصه‌های سفالی</span><i>✳</i>
-      </div>
-    </div>
+                <label for="email">ایمیل شما:</label>
+                <input type="email" id="email" placeholder="ایمیل خود را وارد کنید">
 
-    <!-- INTRO -->
-    <section class="intro section-space">
-      <div class="intro-label">01 / دنیای ما</div>
+                <br><br>
 
-      <div class="intro-content">
-        <p class="section-kicker">یک جهان کوچک از جنس احساس</p>
-        <h2>
-          گاهی زیباترین چیزها،
-          <span>از ساده‌ترین عناصر زمین</span>
-          متولد می‌شوند.
-        </h2>
-      </div>
+                <label for="message">پیام شما:</label>
+                <textarea id="message" placeholder="پیام خود را بنویسید"></textarea>
 
-      <div class="intro-bottom">
-        <p>
-          خورشید، دنیایی برای دوست‌داران هنر دست است؛
-          جایی که فرم‌های آزاد، رنگ‌های زنده و بافت طبیعی
-          کنار هم قرار می‌گیرند تا چیزهایی بسازند که
-          فقط یک وسیله نیستند؛ بخشی از حال‌وهوای خانه‌اند.
-        </p>
-        <div class="intro-flower">✿</div>
-      </div>
-    </section>
+                <br><br>
 
-    <!-- COLLECTIONS -->
-    <section class="collections section-space" id="collections">
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">02 / مجموعه‌های خورشید</p>
-          <h2>هر گوشه، یک <span>جهان تازه</span></h2>
-        </div>
-        <p>از فرم‌های آرام و مینیمال تا رنگ‌هایی که حال‌وهوای خانه را عوض می‌کنند.</p>
-      </div>
+                <button type="submit">ارسال پیام</button>
+            </form>
+        </section>
 
-      <div class="collection-grid">
-        <a href="#featured" class="collection-card collection-large">
-          <img src="https://images.unsplash.com/photo-1576021182211-9ea8dced3690?auto=format&fit=crop&w=1000&q=85" alt="ظروف سرامیکی">
-          <div class="collection-overlay">
-            <span>COLLECTION 01</span>
-            <h3>ظروف روزمره</h3>
-            <p>زیبایی در لحظه‌های ساده زندگی</p>
-            <b>مشاهده مجموعه ↗</b>
-          </div>
-        </a>
+    </main>
 
-        <a href="#featured" class="collection-card collection-tall">
-          <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=900&q=85" alt="گلدان سفالی">
-          <div class="collection-overlay">
-            <span>COLLECTION 02</span>
-            <h3>گلدان‌های خیال</h3>
-            <p>برای گل‌هایی که قصه دارند</p>
-            <b>مشاهده مجموعه ↗</b>
-          </div>
-        </a>
+    <footer>
+        <p>ساخته شده توسط من - سال ۱۴۰۵</p>
+    </footer>
 
-        <a href="#featured" class="collection-card">
-          <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=900&q=85" alt="ظروف هنری">
-          <div class="collection-overlay">
-            <span>COLLECTION 03</span>
-            <h3>فرم‌های آزاد</h3>
-            <p>جایی برای تجربه و جسارت</p>
-            <b>مشاهده مجموعه ↗</b>
-          </div>
-        </a>
-
-        <a href="#featured" class="collection-card">
-          <img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=900&q=85" alt="ظروف دست‌ساز">
-          <div class="collection-overlay">
-            <span>COLLECTION 04</span>
-            <h3>هدیه‌های ماندگار</h3>
-            <p>برای آدم‌های دوست‌داشتنی</p>
-            <b>مشاهده مجموعه ↗</b>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- COLOR STORY -->
-    <section class="color-story section-space">
-      <div class="color-story-text">
-        <p class="section-kicker">03 / بازی رنگ‌ها</p>
-        <h2>رنگ‌هایی از <span>خواب طبیعت</span></h2>
-        <p>
-          رنگ خاک باران‌خورده، سبز باغ‌های دور،
-          آبی آسمان غروب و نارنجی آفتاب.
-          دنیای خورشید از رنگ‌هایی ساخته شده
-          که هرکدام حس و داستان خودشان را دارند.
-        </p>
-        <a href="#featured" class="text-link">دیدن آثار رنگارنگ <span>↗</span></a>
-      </div>
-
-      <div class="color-orbs">
-        <div class="color-orb orb-terracotta"><span>خاک گرم</span></div>
-        <div class="color-orb orb-sage"><span>سبز آرام</span></div>
-        <div class="color-orb orb-blue"><span>آبی خیال</span></div>
-        <div class="color-orb orb-pink"><span>صورتی غروب</span></div>
-        <div class="color-orb orb-yellow"><span>طلایی آفتاب</span></div>
-      </div>
-    </section>
-
-    <!-- FEATURED PRODUCTS -->
-    <section class="featured section-space" id="featured">
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">04 / انتخاب‌های کوچک ما</p>
-          <h2>آثاری برای <span>دوست داشتن</span></h2>
-        </div>
-        <p>چند نمونه از جهان سفالی خورشید؛ محصولات و قیمت‌ها را می‌توانی با اطلاعات واقعی جایگزین کنی.</p>
-      </div>
-
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">همه آثار</button>
-        <button class="filter-btn" data-filter="vase">گلدان</button>
-        <button class="filter-btn" data-filter="table">ظروف</button>
-        <button class="filter-btn" data-filter="art">آثار هنری</button>
-      </div>
-
-      <div class="product-grid" id="productGrid">
-
-        <article class="product-card" data-category="vase">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=700&q=85" alt="گلدان آفتاب">
-            <span class="product-tag">انتخاب محبوب</span>
-            <button class="quick-add" data-add="1" aria-label="افزودن گلدان آفتاب">+</button>
-          </div>
-          <div class="product-info">
-            <div><span>COLLECTION / 01</span><h3>گلدان آفتاب</h3></div>
-            <strong>۸۵۰,۰۰۰ تومان</strong>
-          </div>
-          <button class="product-detail" data-add="1">افزودن به سبد خرید ↗</button>
-        </article>
-
-        <article class="product-card" data-category="table">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=700&q=85" alt="کاسه مهتاب">
-            <span class="product-tag tag-green">ساخته‌شده با دست</span>
-            <button class="quick-add" data-add="2" aria-label="افزودن کاسه مهتاب">+</button>
-          </div>
-          <div class="product-info">
-            <div><span>COLLECTION / 02</span><h3>کاسه مهتاب</h3></div>
-            <strong>۶۵۰,۰۰۰ تومان</strong>
-          </div>
-          <button class="product-detail" data-add="2">افزودن به سبد خرید ↗</button>
-        </article>
-
-        <article class="product-card" data-category="art">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=700&q=85" alt="فرم خیال">
-            <span class="product-tag tag-pink">اثر هنری</span>
-            <button class="quick-add" data-add="3" aria-label="افزودن فرم خیال">+</button>
-          </div>
-          <div class="product-info">
-            <div><span>COLLECTION / 03</span><h3>فرم خیال</h3></div>
-            <strong>۵۲۰,۰۰۰ تومان</strong>
-          </div>
-          <button class="product-detail" data-add="3">افزودن به سبد خرید ↗</button>
-        </article>
-
-        <article class="product-card" data-category="vase">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=700&q=85" alt="گلدان باران">
-            <span class="product-tag tag-blue">تازه از کارگاه</span>
-            <button class="quick-add" data-add="4" aria-label="افزودن گلدان باران">+</button>
-          </div>
-          <div class="product-info">
-            <div><span>COLLECTION / 04</span><h3>گلدان باران</h3></div>
-            <strong>۴۸۰,۰۰۰ تومان</strong>
-          </div>
-          <button class="product-detail" data-add="4">افزودن به سبد خرید ↗</button>
-        </article>
-      </div>
-    </section>
-
-    <!-- STATEMENT -->
-    <section class="statement">
-      <div class="statement-pattern">✳</div>
-      <p>THE BEAUTY OF IMPERFECTION</p>
-      <h2>
-        قرار نیست همه‌چیز
-        <span>بی‌نقص باشد.</span>
-        گاهی تفاوت‌ها زیباترند.
-      </h2>
-      <div class="statement-bottom">
-        <span>خورشید، جایی برای زیبایی‌های واقعی</span>
-        <span>✦</span>
-      </div>
-    </section>
-
-    <!-- STORY -->
-    <section class="story section-space" id="story">
-      <div class="story-image">
-        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1000&q=85" alt="فضای هنری کارگاه">
-        <div class="story-image-label">A LITTLE<br>WORLD OF<br>ART ✳</div>
-      </div>
-
-      <div class="story-content">
-        <p class="section-kicker">05 / قصه خورشید</p>
-        <h2>از یک تکه خاک،<br><span>تا یک دنیا احساس.</span></h2>
-        <p>
-          خورشید از علاقه به چیزهای ساده و واقعی شروع شد؛
-          از لمس خاک، از تماشای شکل گرفتن یک فرم،
-          از لحظه‌ای که یک تکه گل بی‌جان،
-          زیر دست هنرمند تبدیل به چیزی دوست‌داشتنی می‌شود.
-        </p>
-        <p>
-          ما به زیباییِ دست‌ساز بودن باور داریم.
-          به اینکه هر اثر می‌تواند کمی متفاوت باشد
-          و همین تفاوت، بخشی از شخصیت آن است.
-        </p>
-        <a href="#contact" class="button button-outline">با دنیای ما آشنا شو <span>↗</span></a>
-        <span class="story-signature">با عشق، خورشید ✿</span>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section class="process section-space" id="process">
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">06 / پشت صحنه هنر</p>
-          <h2>از خاک تا <span>یک اثر زنده</span></h2>
-        </div>
-        <p>هر اثر مسیر خودش را طی می‌کند؛ مسیری پر از صبر، تجربه و لمس دستان هنرمند.</p>
-      </div>
-
-      <div class="process-grid">
-        <div class="process-step">
-          <span class="step-number">01</span>
-          <div class="step-icon">◌</div>
-          <h3>لمس خاک</h3>
-          <p>همه‌چیز از انتخاب و آماده‌سازی خاک آغاز می‌شود.</p>
-        </div>
-
-        <div class="process-step">
-          <span class="step-number">02</span>
-          <div class="step-icon">✳</div>
-          <h3>شکل گرفتن خیال</h3>
-          <p>فرم‌ها با حوصله و با کمک دست‌های هنرمند جان می‌گیرند.</p>
-        </div>
-
-        <div class="process-step">
-          <span class="step-number">03</span>
-          <div class="step-icon">◉</div>
-          <h3>رنگ و روح</h3>
-          <p>رنگ‌ها و بافت‌ها شخصیت نهایی هر اثر را می‌سازند.</p>
-        </div>
-
-        <div class="process-step">
-          <span class="step-number">04</span>
-          <div class="step-icon">✧</div>
-          <h3>تولد یک اثر</h3>
-          <p>پس از پخت و آماده‌سازی، اثر راهی خانه‌ای تازه می‌شود.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- BIG IMAGE -->
-    <section class="full-image">
-      <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=1800&q=90" alt="فضای آرام و هنری">
-      <div class="full-image-content">
-        <span>THE ART OF SLOW LIVING</span>
-        <h2>کمی آرام‌تر؛<br>کمی زیباتر زندگی کن.</h2>
-      </div>
-    </section>
-
-    <!-- VALUES -->
-    <section class="values section-space">
-      <div class="values-heading">
-        <p class="section-kicker">07 / چیزهایی که به آن‌ها باور داریم</p>
-        <h2>زیبایی فقط در ظاهر <span>نیست.</span></h2>
-      </div>
-
-      <div class="values-grid">
-        <div class="value-card">
-          <span>✿</span>
-          <h3>اصالت</h3>
-          <p>دوست‌داشتن چیزهایی که با صداقت و سلیقه ساخته می‌شوند.</p>
-        </div>
-        <div class="value-card">
-          <span>☘</span>
-          <h3>طبیعت</h3>
-          <p>الهام گرفتن از زمین، رنگ‌ها و فرم‌های زنده جهان.</p>
-        </div>
-        <div class="value-card">
-          <span>✧</span>
-          <h3>خلاقیت</h3>
-          <p>آزاد بودن در تجربه، ساختن و کشف شکل‌های تازه.</p>
-        </div>
-        <div class="value-card">
-          <span>♡</span>
-          <h3>محبت</h3>
-          <p>ساختن هر اثر با حوصله و توجه به جزئیات.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section class="gallery section-space" id="gallery">
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">08 / پنجره‌ای به دنیای ما</p>
-          <h2>لحظه‌های <span>رنگی</span></h2>
-        </div>
-        <p>تکه‌هایی از زیبایی، بافت و حس‌وحال دنیای خورشید.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <div class="gallery-item gallery-item-tall">
-          <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=85" alt="گالری سفال ۱">
-          <span>01 / FORM</span>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1576021182211-9ea8dced3690?auto=format&fit=crop&w=800&q=85" alt="گالری سفال ۲">
-          <span>02 / COLOR</span>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=800&q=85" alt="گالری سفال ۳">
-          <span>03 / TEXTURE</span>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=85" alt="گالری سفال ۴">
-          <span>04 / ART</span>
-        </div>
-        <div class="gallery-item gallery-item-wide">
-          <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1000&q=85" alt="گالری سفال ۵">
-          <span>05 / STUDIO</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- JOURNAL -->
-    <section class="journal section-space" id="journal">
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">09 / دفتر خیال</p>
-          <h2>چند خط درباره <span>زیبایی</span></h2>
-        </div>
-        <p>یادداشت‌هایی کوچک از دنیایی که با خاک، رنگ و خیال ساخته شده است.</p>
-      </div>
-
-      <div class="journal-grid">
-        <article class="journal-card">
-          <div class="journal-image">
-            <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=800&q=85" alt="یادداشت اول">
-          </div>
-          <span>یادداشت شماره ۰۱</span>
-          <h3>چرا چیزهای دست‌ساز این‌قدر دوست‌داشتنی‌اند؟</h3>
-          <p>شاید چون در هرکدام، بخشی از زمان و توجه یک انسان پنهان شده است.</p>
-        </article>
-
-        <article class="journal-card">
-          <div class="journal-image">
-            <img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=800&q=85" alt="یادداشت دوم">
-          </div>
-          <span>یادداشت شماره ۰۲</span>
-          <h3>هنرِ پیدا کردن زیبایی در سادگی</h3>
-          <p>گاهی یک فرم ساده می‌تواند بیشتر از هزار کلمه حرف برای گفتن داشته باشد.</p>
-        </article>
-
-        <article class="journal-card">
-          <div class="journal-image">
-            <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=85" alt="یادداشت سوم">
-          </div>
-          <span>یادداشت شماره ۰۳</span>
-          <h3>خانه‌ای که با هنر نفس می‌کشد</h3>
-          <p>چیزهای کوچک می‌توانند حال‌وهوای یک فضای کامل را تغییر دهند.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq section-space" id="faq">
-      <div class="faq-heading">
-        <p class="section-kicker">10 / پرسش‌های کوچک</p>
-        <h2>شاید بخواهی <span>بدانی...</span></h2>
-        <p>چند پاسخ کوتاه برای پرسش‌هایی که ممکن است داشته باشی.</p>
-      </div>
-
-      <div class="faq-list">
-        <details>
-          <summary>آیا آثار خورشید دست‌ساز هستند؟ <span>＋</span></summary>
-          <p>اطلاعات ساخت هر محصول را می‌توانی در توضیحات همان محصول درج کنی. این بخش را مطابق شیوه واقعی تولید محصولات تکمیل کن.</p>
-        </details>
-        <details>
-          <summary>چطور می‌توانم سفارش بدهم؟ <span>＋</span></summary>
-          <p>می‌توانی محصول مورد نظرت را به سبد اضافه کنی و از طریق تلگرام برای ثبت سفارش با ما در ارتباط باشی.</p>
-        </details>
-        <details>
-          <summary>آیا امکان سفارش اختصاصی وجود دارد؟ <span>＋</span></summary>
-          <p>برای اطلاع از امکان ساخت سفارش اختصاصی، جزئیات طرح مورد نظرت را از طریق تلگرام بفرست.</p>
-        </details>
-        <details>
-          <summary>چطور از محصولات مراقبت کنم؟ <span>＋</span></summary>
-          <p>روش نگهداری هر اثر به نوع ساخت و لعاب آن بستگی دارد. بهتر است راهنمای مراقبت مخصوص همان محصول را هنگام خرید دریافت کنی.</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact section-space" id="contact">
-      <div class="contact-decoration">✳</div>
-      <div class="contact-content">
-        <p class="section-kicker">11 / از اینجا به بعد، قصه مشترک ماست</p>
-        <h2>دوست داری بخشی از <span>دنیای خورشید</span> باشی؟</h2>
-        <p>
-          برای دیدن آثار تازه، دنبال کردن مسیر کارگاه
-          و حمایت از هنر دست، به جمع ما در تلگرام بپیوند.
-        </p>
-        <a href="https://t.me/suun1001" target="_blank" rel="noopener" class="button button-telegram">
-          ورود به دنیای تلگرام <span>↗</span>
-        </a>
-        <span class="contact-small">از همراهی تو خوشحال می‌شویم ✿</span>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-main">
-      <div class="footer-brand">
-        <a href="#top" class="logo footer-logo">
-          <span class="logo-symbol">☼</span>
-          <span class="logo-text">
-            <strong>خورشید</strong>
-            <small>قصه‌ای از خاک و خیال</small>
-          </span>
-        </a>
-        <p>از دل خاک، برای لحظه‌های زیبای زندگی.</p>
-      </div>
-
-      <div class="footer-links">
-        <h4>گشت‌وگذار</h4>
-        <a href="#home">خانه</a>
-        <a href="#collections">مجموعه‌ها</a>
-        <a href="#featured">محصولات</a>
-        <a href="#story">داستان ما</a>
-      </div>
-
-      <div class="footer-links">
-        <h4>بیشتر بدان</h4>
-        <a href="#process">مراحل ساخت</a>
-        <a href="#gallery">گالری</a>
-        <a href="#journal">دفتر خیال</a>
-        <a href="#faq">پرسش‌های متداول</a>
-      </div>
-
-      <div class="footer-links">
-        <h4>همراه ما باش</h4>
-        <a href="https://t.me/suun1001" target="_blank" rel="noopener">کانال تلگرام ↗</a>
-        <a href="https://t.me/zizi1001" target="_blank" rel="noopener">ارتباط با ما ↗</a>
-        <span>۰۹۰۴۴۱۸۸۵۸۹</span>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>© خورشید — ساخته‌شده با عشق و خیال</span>
-      <a href="#top">بازگشت به بالا ↑</a>
-      <span>HANDMADE WITH SOUL ✳</span>
-    </div>
-  </footer>
-
-  <!-- CART -->
-  <div class="cart-backdrop" id="cartBackdrop"></div>
-
-  <aside class="cart-panel" id="cartPanel">
-    <div class="cart-header">
-      <div>
-        <span>YOUR LITTLE SELECTION</span>
-        <h3>سبد انتخاب تو</h3>
-      </div>
-      <button id="closeCart" class="close-cart" aria-label="بستن سبد">×</button>
-    </div>
-
-    <div class="cart-items" id="cartItems">
-      <div class="empty-cart">
-        <span>✿</span>
-        <p>هنوز چیزی انتخاب نکرده‌ای!</p>
-        <small>شاید یک اثر زیبا منتظر تو باشد.</small>
-      </div>
-    </div>
-
-    <div class="cart-footer">
-      <div class="cart-total">
-        <span>جمع کل</span>
-        <strong id="cartTotal">۰ تومان</strong>
-      </div>
-      <button class="checkout-button" id="checkoutButton">ثبت سفارش در تلگرام ↗</button>
-      <small>برای نهایی کردن سفارش، به تلگرام هدایت می‌شوی.</small>
-    </div>
-  </aside>
-
-  <button class="cart-float" id="openCart" aria-label="باز کردن سبد خرید">
-    <span>♡</span>
-    <b id="cartCount">۰</b>
-  </button>
-
-  <div class="toast" id="toast">به سبد انتخابت اضافه شد ✿</div>
-
-  <script src="script.js"></script>
 </body>
 </html>
